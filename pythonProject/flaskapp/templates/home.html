@@ -6,5 +6,10 @@
 </head>
 <body>
     <h1>Home page</h1>
+    {% for i in post%}  <!--Start of jinja template-->
+        <h2>{{i.title}}</h2>
+        <p>By <i>{{i.author}}</i> on {{i.date_posted}} </p>
+        <p>{{i.content}}</p>
+    {% endfor %} <!--ending for loop syntax !}
 </body>
 </html>
