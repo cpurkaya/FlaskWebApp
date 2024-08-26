@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-        <title>Flask Blog - {{title}}</title>
-    {% else %}
-        <title>Flask Blog</title>
-    {% endif %}
-</head>
-<body>
+{% extends "layout.html" %}
+{% block content %}
     <h1>Home page</h1>
     {% for i in post%}  <!--Start of jinja template-->
         <h2>{{i.title}}</h2>
         <p>By <i>{{i.author}}</i> on {{i.date_posted}} </p>
         <p>{{i.content}}</p>
-    {% endfor %} <!--ending for loop syntax !}
-</body>
-</html>
+    {% endfor %} <!--ending for loop syntax !-->
+
+{% endblock content %}
