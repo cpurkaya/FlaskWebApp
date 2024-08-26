@@ -29,7 +29,7 @@ def home():
 
 @app.route("/about") #adding an about route
 def about():
-    return render_template('about.html')
+    return render_template('about.html',title='About')
 
 if __name__ == '__main__': #if it is run directly and not if imported onto other py file
     app.run(debug=True) #debug=True because to not restart the web server each time we make a change
